@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aarav Sharma | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b12;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 18px 7%;
+      background: rgba(11,11,18,.92);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #242432;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 80px 7%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tag {
+      color: #9b8cff;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 78px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #9b8cff;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #aaa;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      background: #9b8cff;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid #444;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .about {
+      color: #aaa;
+      max-width: 750px;
+    }
+
+    .skills,
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #15151f;
+      border: 1px solid #292936;
+      padding: 25px;
+      border-radius: 16px;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #9b8cff;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #999;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      border-top: 1px solid #242432;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      section {
+        padding: 65px 6%;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Aarav.</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="tag">B.Com Student • Freelancer</div>
+
+    <h1>
+      Hi, I'm <span>Aarav Sharma.</span>
+    </h1>
+
+    <p>
+      I am a B.Com student and beginner freelancer interested in
+      web design, digital projects and creative work.
+    </p>
+
+    <div>
+      <a class="btn" href="#projects">View My Work</a>
+      <a class="btn secondary" href="#contact">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p class="about">
+      I'm a motivated student who enjoys learning new digital skills
+      and creating useful projects. I'm currently building my skills
+      in web design, content creation and freelancing.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills">
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>Modern and responsive website designs.</p>
+      </div>
+
+      <div class="card">
+        <h3>Canva Design</h3>
+        <p>Social media posts, presentations and graphics.</p>
+      </div>
+
+      <div class="card">
+        <h3>Video Editing</h3>
+        <p>Short-form videos and social media content.</p>
+      </div>
+
+      <div class="card">
+        <h3>Communication</h3>
+        <p>Professional communication and teamwork.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <h3>Personal Portfolio</h3>
+        <p>A modern responsive portfolio website.</p>
+      </div>
+
+      <div class="card">
+        <h3>Business Website</h3>
+        <p>A demo website created for a small business.</p>
+      </div>
+
+      <div class="card">
+        <h3>Social Media Design</h3>
+        <p>Creative promotional designs for social media.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let's Work Together</h2>
+
+    <p>
+      Interested in working with me? Feel free to get in touch.
+    </p>
+
+    <a class="btn" href="mailto:aarav@example.com">
+      Email Me
+    </a>
+  </section>
+
+  <footer>
+    © 2026 Aarav Sharma. All rights reserved.
+  </footer>
+
+</body>
+</html> 
