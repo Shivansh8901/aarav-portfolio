@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aarav Sharma | Portfolio</title>
+
+  <title>Aarav Sharma | Personal Portfolio</title>
+
+  <meta name="description"
+        content="Aarav Sharma — B.Com student, freelancer and creative digital enthusiast.">
 
   <style>
     * {
@@ -13,160 +17,389 @@
       scroll-behavior: smooth;
     }
 
+    :root {
+      --bg: #08080d;
+      --card: #111119;
+      --card2: #151520;
+      --text: #ffffff;
+      --muted: #a3a3b2;
+      --accent: #8b5cf6;
+      --accent2: #a78bfa;
+      --border: rgba(255,255,255,.09);
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #0b0b12;
-      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      padding: 18px 7%;
-      background: rgba(11,11,18,.92);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #242432;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: #aaa;
+    a {
       text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
+      color: inherit;
     }
 
-    nav a:hover {
-      color: #fff;
-    }
-
-    section {
-      padding: 80px 7%;
-      max-width: 1100px;
+    .container {
+      width: min(1100px, 90%);
       margin: auto;
     }
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    /* NAVBAR */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(8,8,13,.78);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
     }
 
-    .tag {
-      color: #9b8cff;
-      font-weight: bold;
-      margin-bottom: 15px;
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--accent2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      background: rgba(139,92,246,.18);
+      filter: blur(100px);
+      border-radius: 50%;
+      top: 20%;
+      right: 5%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      padding-top: 70px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent2);
+      border: 1px solid rgba(167,139,250,.25);
+      background: rgba(139,92,246,.08);
+      padding: 8px 14px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
     }
 
     h1 {
-      font-size: clamp(42px, 8vw, 78px);
-      line-height: 1.05;
-      margin-bottom: 20px;
-    }
-
-    h1 span {
-      color: #9b8cff;
-    }
-
-    .hero p {
-      max-width: 650px;
-      color: #aaa;
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      background: #9b8cff;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    .btn.secondary {
-      background: transparent;
-      border: 1px solid #444;
-    }
-
-    h2 {
-      font-size: 36px;
-      margin-bottom: 30px;
-    }
-
-    .about {
-      color: #aaa;
-      max-width: 750px;
-    }
-
-    .skills,
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: #15151f;
-      border: 1px solid #292936;
-      padding: 25px;
-      border-radius: 16px;
-      transition: .3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #9b8cff;
-    }
-
-    .card h3 {
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: #999;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      color: #aaa;
+      font-size: clamp(48px, 9vw, 86px);
+      line-height: .98;
+      letter-spacing: -4px;
+      max-width: 900px;
       margin-bottom: 25px;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #666;
-      border-top: 1px solid #242432;
+    h1 span {
+      color: var(--accent2);
     }
 
-    @media (max-width: 600px) {
-      nav a {
-        margin-left: 8px;
-        font-size: 12px;
+    .hero-description {
+      color: var(--muted);
+      max-width: 650px;
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: white;
+      background: rgba(255,255,255,.02);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent2);
+      transform: translateY(-3px);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-label {
+      color: var(--accent2);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 5vw, 48px);
+      letter-spacing: -2px;
+      margin-bottom: 35px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .about-text {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .about-card {
+      background: linear-gradient(145deg, var(--card), var(--card2));
+      border: 1px solid var(--border);
+      padding: 28px;
+      border-radius: 20px;
+    }
+
+    .about-card strong {
+      display: block;
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .skill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 25px;
+      border-radius: 18px;
+      transition: .3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-6px);
+      border-color: rgba(167,139,250,.5);
+    }
+
+    .skill-icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .skill h3 {
+      margin-bottom: 7px;
+    }
+
+    .skill p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
+    }
+
+    .project:hover {
+      transform: translateY(-7px);
+      border-color: rgba(167,139,250,.5);
+    }
+
+    .project-number {
+      color: var(--accent2);
+      font-weight: 800;
+      margin-bottom: 35px;
+    }
+
+    .project h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .project-link {
+      margin-top: auto;
+      color: var(--accent2);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      text-align: center;
+      background: linear-gradient(145deg, #12121d, #0d0d14);
+      border: 1px solid var(--border);
+      padding: 70px 25px;
+      border-radius: 25px;
+    }
+
+    .contact-box h2 {
+      font-size: clamp(32px, 6vw, 55px);
+      letter-spacing: -2px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 550px;
+      margin: 0 auto 28px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
       }
 
       section {
-        padding: 65px 6%;
+        padding: 80px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .skills-grid {
+        grid-template-columns: 1fr;
       }
 
-      .hero {
-        min-height: 80vh;
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
       }
     }
   </style>
@@ -174,107 +407,305 @@
 
 <body>
 
+  <!-- NAVIGATION -->
+
   <nav>
-    <div class="logo">Aarav.</div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <div class="container nav-inner">
+
+      <a href="#" class="logo">
+        Aarav<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="tag">B.Com Student • Freelancer</div>
 
-    <h1>
-      Hi, I'm <span>Aarav Sharma.</span>
-    </h1>
+  <!-- HERO -->
 
-    <p>
-      I am a B.Com student and beginner freelancer interested in
-      web design, digital projects and creative work.
-    </p>
+  <main>
 
-    <div>
-      <a class="btn" href="#projects">View My Work</a>
-      <a class="btn secondary" href="#contact">Contact Me</a>
-    </div>
-  </section>
+    <section class="hero">
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p class="about">
-      I'm a motivated student who enjoys learning new digital skills
-      and creating useful projects. I'm currently building my skills
-      in web design, content creation and freelancing.
-    </p>
-  </section>
+      <div class="container hero-content">
 
-  <section id="skills">
-    <h2>My Skills</h2>
+        <div class="eyebrow">
+          B.Com Student · Freelancer
+        </div>
 
-    <div class="skills">
-      <div class="card">
-        <h3>Web Design</h3>
-        <p>Modern and responsive website designs.</p>
+        <h1>
+          Building ideas into <span>digital experiences.</span>
+        </h1>
+
+        <p class="hero-description">
+          I'm Aarav Sharma, a B.Com student and aspiring freelancer
+          passionate about web design, creative projects and digital work.
+        </p>
+
+        <div class="buttons">
+
+          <a href="#projects" class="btn btn-primary">
+            Explore My Work
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            Let's Connect
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Canva Design</h3>
-        <p>Social media posts, presentations and graphics.</p>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-label">
+          About Me
+        </div>
+
+        <h2 class="section-title">
+          A little about who I am.
+        </h2>
+
+        <div class="about-grid">
+
+          <div class="about-text">
+
+            <p>
+              I'm a motivated B.Com student who enjoys learning new
+              technologies and turning creative ideas into useful
+              digital projects.
+            </p>
+
+            <br>
+
+            <p>
+              I'm currently developing my skills in web design,
+              digital content and freelancing while building projects
+              that help me gain real-world experience.
+            </p>
+
+          </div>
+
+          <div class="about-card">
+
+            <strong>2026</strong>
+
+            <p>
+              Currently learning, creating and building my freelance journey.
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Video Editing</h3>
-        <p>Short-form videos and social media content.</p>
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+      <div class="container">
+
+        <div class="section-label">
+          What I Do
+        </div>
+
+        <h2 class="section-title">
+          Skills & abilities.
+        </h2>
+
+        <div class="skills-grid">
+
+          <div class="skill">
+            <div class="skill-icon">💻</div>
+            <h3>Web Design</h3>
+            <p>
+              Clean, modern and responsive website experiences.
+            </p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">🎨</div>
+            <h3>Graphic Design</h3>
+            <p>
+              Social media graphics, posters and digital designs.
+            </p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">🎬</div>
+            <h3>Video Editing</h3>
+            <p>
+              Short-form videos and engaging digital content.
+            </p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">🚀</div>
+            <h3>Freelancing</h3>
+            <p>
+              Helping people turn their ideas into digital projects.
+            </p>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Communication</h3>
-        <p>Professional communication and teamwork.</p>
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+      <div class="container">
+
+        <div class="section-label">
+          Selected Work
+        </div>
+
+        <h2 class="section-title">
+          Projects I'm proud of.
+        </h2>
+
+        <div class="projects-grid">
+
+          <article class="project">
+
+            <div class="project-number">
+              01
+            </div>
+
+            <h3>Personal Portfolio</h3>
+
+            <p>
+              A responsive personal portfolio designed to showcase
+              skills, projects and experience.
+            </p>
+
+            <a href="#" class="project-link">
+              View Project →
+            </a>
+
+          </article>
+
+
+          <article class="project">
+
+            <div class="project-number">
+              02
+            </div>
+
+            <h3>Business Website</h3>
+
+            <p>
+              A modern website concept designed for a small business
+              to build its online presence.
+            </p>
+
+            <a href="#" class="project-link">
+              View Project →
+            </a>
+
+          </article>
+
+
+          <article class="project">
+
+            <div class="project-number">
+              03
+            </div>
+
+            <h3>Creative Campaign</h3>
+
+            <p>
+              A collection of digital designs created for social media
+              and promotional campaigns.
+            </p>
+
+            <a href="#" class="project-link">
+              View Project →
+            </a>
+
+          </article>
+
+        </div>
+
       </div>
-    </div>
-  </section>
 
-  <section id="projects">
-    <h2>Featured Projects</h2>
+    </section>
 
-    <div class="projects">
 
-      <div class="card">
-        <h3>Personal Portfolio</h3>
-        <p>A modern responsive portfolio website.</p>
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="section-label">
+            Get In Touch
+          </div>
+
+          <h2>
+            Let's create something great.
+          </h2>
+
+          <p>
+            Have an idea, project or opportunity?
+            I'd love to hear from you.
+          </p>
+
+          <a
+            href="mailto:aarav@example.com"
+            class="btn btn-primary">
+            Email Me
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Business Website</h3>
-        <p>A demo website created for a small business.</p>
-      </div>
+    </section>
 
-      <div class="card">
-        <h3>Social Media Design</h3>
-        <p>Creative promotional designs for social media.</p>
-      </div>
+  </main>
 
-    </div>
-  </section>
 
-  <section id="contact" class="contact">
-    <h2>Let's Work Together</h2>
-
-    <p>
-      Interested in working with me? Feel free to get in touch.
-    </p>
-
-    <a class="btn" href="mailto:aarav@example.com">
-      Email Me
-    </a>
-  </section>
+  <!-- FOOTER -->
 
   <footer>
-    © 2026 Aarav Sharma. All rights reserved.
+
+    <div class="container footer-inner">
+
+      <div>
+        © 2026 Aarav Sharma
+      </div>
+
+      <div>
+        Designed & built with passion.
+      </div>
+
+    </div>
+
   </footer>
 
 </body>
-</html> 
+  </html>
