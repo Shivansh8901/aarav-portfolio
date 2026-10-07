@@ -137,7 +137,52 @@ nav {
     #hero { padding: 100px 20px; text-align: center; justify-content: center; }
     .hero-content h1 { font-size: 36px; }
         }/* CSS ka saara code yahan aayega */
-    </style>
+    /* Contact & Footer Section */
+#contact {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-item {
+    background: var(--white);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--white);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #555;
+    </style> 
 </head>
 <body>
 
@@ -177,7 +222,6 @@ nav {
         </div>
     </div>
 </section>
-
 <!-- Skills Section -->
 <section id="skills">
     <h2 class="section-title">My <span>Skills</span></h2>
@@ -190,10 +234,19 @@ nav {
         <div class="skill-card">Git & GitHub</div>
     </div>
 </section>
-    <!-- Experience Section -->
-    <!-- Projects Section -->
-    <!-- Contact Section -->
-    <!-- Footer -->
-
 </body>
+    <!-- Contact Section -->
+<section id="contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <p style="margin-bottom: 20px;">Feel free to reach out for collaborations or just a friendly hello!</p>
+    <div class="contact-info">
+        <a href="mailto:ss8039125@gmail.com" class="contact-item">📧 Email Me</a>
+        <a href="https://github.com/shivansh8901" target="_blank" class="contact-item">💻 GitHub</a>
+        <a href="https://www.linkedin.com/in/shivansh-shrivastava-ab7b5a300?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="contact-item">🔗 LinkedIn</a>
+    </div>
+</section>
+<!-- Footer -->
+<footer>
+    <p>© 2024 Shivansh. All rights reserved. Built with ❤️</p>
+</footer>
 </html>
