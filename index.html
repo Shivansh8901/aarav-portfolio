@@ -182,6 +182,28 @@ footer {
 footer p {
     font-size: 14px;
     color: #555;
+    .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    background: var(--white);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
     </style> 
 </head>
 <body>
@@ -213,7 +235,7 @@ footer p {
     <h2 class="section-title">About <span>Me</span></h2>
     <div class="about-content">
         <div class="about-image">
-            <img src="my-photo.jpg" alt="Shivansh" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent-color); box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img IMG_20261002_120030_897" alt="Shivansh" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent-color); box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
         </div>
         <div class="about-text">
             <p>Hello! Main Shivansh hu, ek passionate Web Developer aur Designer. Mujhe clean aur user-friendly websites banana pasand hai. Main HTML, CSS, JavaScript aur React jaise technologies ka use karke modern web experiences banata hu.</p>
